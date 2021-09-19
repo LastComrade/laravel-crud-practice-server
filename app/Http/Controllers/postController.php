@@ -38,7 +38,7 @@ class postController extends Controller
     {
         $newPost = Post::create([
             "title" => $request->title,
-            "author" => $request->author,
+            "type" => $request->type,
             "content" => $request->content,
         ]);
         if ($newPost) {
@@ -80,7 +80,7 @@ class postController extends Controller
     {
         $post = Post::find($id);
         $post->title = $request->title;
-        $post->author = $request->author;
+        $post->type = $request->type;
         $post->content = $request->content;
         if ($post->save()) {
             return response()->json(['status' => 200]);
