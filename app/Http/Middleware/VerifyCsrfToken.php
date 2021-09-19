@@ -12,6 +12,6 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
-        "https://elated-borg-b0210a.netlify.app"
+        "*"
     ];
 }
